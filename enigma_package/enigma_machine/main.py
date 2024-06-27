@@ -60,3 +60,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+    
+    
+# building in one place for now so i can see what i am 
+# doing, keep an eye4 on all the pieces at once, but i do 
+# plan to make this modular, hence the test names - the 
+# eventual structure of the machine package will probably 
+# be similar, if not literally 1:1

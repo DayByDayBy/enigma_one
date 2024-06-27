@@ -8,9 +8,6 @@ early days, hence the whiteboard-and-post-its vibe to the readme and some of the
 
 
 
-
-
-
 M:
 
 - core encryption algorithm (encode/decode)

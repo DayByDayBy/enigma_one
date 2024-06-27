@@ -8,12 +8,15 @@ class TestRotor(unittest.TestCase):
     def test_encode_forward(self):
         self.assertEqual(self.rotor.encode_forward('A'), 'E')
         self.assertEqual(self.rotor.encode_forward('Z'), 'J')
-        # Add more test cases for different characters and positions
 
     def test_encode_backward(self):
         self.assertEqual(self.rotor.encode_backward('E'), 'A')
         self.assertEqual(self.rotor.encode_backward('J'), 'Z')
-        # Add more test cases for different characters and positions
 
 if __name__ == '__main__':
     unittest.main()
+
+
+
+# the basic structure will change, so 'from enigma_machine.main import Rotor'  will 
+# change once i flesh out the rest, make4 it modular
