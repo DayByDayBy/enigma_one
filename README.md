@@ -2,6 +2,15 @@
 
  encode, decode, holiday inn
 
+this is an attempt to model enigma, the classic machine
+
+early days, hence the whiteboard-and-post-its vibe to the readme and some of the comments 
+
+
+
+
+
+
 M:
 
 - core encryption algorithm (encode/decode)
@@ -12,7 +21,6 @@ M:
 - Documentation: Comprehensive documentation for users and developers.
 
 S:
-
 
 C
 W
