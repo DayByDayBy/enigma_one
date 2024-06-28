@@ -1,5 +1,5 @@
 import unittest
-from enigma_machine.main import Rotor
+from enigma_machine.rotor import Rotor
 
 class TestRotor(unittest.TestCase):
     def setUp(self):
@@ -16,7 +16,3 @@ class TestRotor(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-
-
-# the basic structure will change, so 'from enigma_machine.main import Rotor'  will 
-# change once i flesh out the rest, make4 it modular

@@ -4,7 +4,9 @@
 
 this is an attempt to model enigma, the classic machine
 
-early days, hence the whiteboard-and-post-its vibe to the readme and some of the comments 
+early days, hence the whiteboard-and-post-its vibe to the readme and some of the comments
+
+
 
 
 
@@ -23,7 +25,6 @@ C
 W
 
 
-
 1. scherbius' OG:
 
 - keyboard for input
@@ -40,3 +41,14 @@ possible components:
 - Reflector class: Handles the reflection of signals
 - Plugboard class: Manages the plugboard connections
 - Enigma class: Combines all components and handles the encryption process
+
+
+
+-----   --------------------------------
+
+
+
+
+update: 
+got in a bit late, so the readme will have to wait
+code is now more like i expect it to be and passing basic tests, altho i am still to write one set of them, test_enigma.py is empty atm
