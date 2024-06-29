@@ -1,9 +1,13 @@
 # walzen:
 class Rotor:
-    def __init__(self, wiring, notch):
-        self.wiring = wiring    # ie the config, the machine's setting
-        self.notch = notch      # ie the notch position - enigma is per-letter, and this alows for movement through those steps
-        self.position = 0       # ie the position of the notch, initialised as first notch, 'A'
+    def __init__(self, wiring, notch, initial_position = 0):    # initialising as zero
+        self.wiring = wiring                                    # ie the config, the machine's setting
+        self.notch = notch                                      # ie the notch position - enigma is per-letter, and this alows for movement through those steps
+        self.initial_position = initial_position                # ie the position of the notch, initialised as first notch, 'A'
+        self.position = self.initial_position
+
+    def reset(self):
+        self.position = self.initial_position      
 
     def rotate(self):
         self.position = (self.position + 1) % 26
