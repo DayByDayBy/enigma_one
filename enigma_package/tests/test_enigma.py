@@ -31,15 +31,30 @@ class TestEnigma(unittest.TestCase):
     def test_decrypt(self):
         plaintext = "HELLO WORLD"
         ciphertext = self.enigma.encrypt(plaintext)
+        self.enigma.reset()
         decrypted_text = self.enigma.decrypt(ciphertext)
         self.assertEqual(plaintext, decrypted_text)
                 
     def test_back_and_forth(self):
-        original = "ALAN TURING STANDS ENDURING"
+        original = "ALAN TURING YET ENDURING"
         encrypted_text = self.enigma.encrypt(original)
         decrypted_text = self.enigma.decrypt(encrypted_text)
         self.assertEqual(original, decrypted_text)
         
+ # idempotence is a cool word - it just means the same settings and the same input produce the same output
+ # testing that it does change, and that it changes the same text into the same cipher if reset and reprocessed.     
+        
+    def test_process_idempotence(self):
+        plaintext = "THE MEDIUM IS THE MESSAGE"
+        first_pass = self.enigma.process(plaintext)     
+        self.assertNotEqual(plaintext, first_pass)
+        self.enigma.reset()
+        second_pass = self.enigma.process(plaintext)
+        self.assertEqual(first_pass, second_pass)
+        self.enigma.reset()
+        third_pass = self.enigma.process(plaintext)
+        self.assertEqual(first_pass, third_pass)
+            
         
 
 if __name__ == '__main__':
