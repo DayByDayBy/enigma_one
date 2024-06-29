@@ -9,9 +9,7 @@ class Enigma:
         self.reflector = reflector
         self.plugboard = plugboard
         
-    def reset(self):
-        for rotor in self.rotors:
-            rotor.reset()    
+
 
     # def encrypt(self, message):
     #     pass
@@ -19,11 +17,18 @@ class Enigma:
     # def decrypt(self, message):
     #     pass
     
-   
     # getting a bit distracted atm by what to do with spaces 
     # etc - enigma OG only had A-Z keys, and would output an 
     # unbroken string of A-Z only which would then be tapped 
-    # out as if a sequence of 5 letter words (as convention, sometimes 4, could be any number)
+    # out as if a sequence of 5 letter words (as convention, 
+    # sometimes 4, could be any number) which seems like an 
+    # okay way to avoid making frequency and spacing analysis 
+    # harder, but i wonder if a method that encrypted spaces 
+    # too would be worth investigating - a 27 character alphabet, 
+    # as it were, where a space might be swapped for a letter, and 
+    # a letter might be swapped for a space. same logic could be 
+    # applied to a period, etc
+    
     
     def process(self, message):
         result = ""
@@ -38,7 +43,7 @@ class Enigma:
                 rotor.rotate()
                 char = rotor.encode_forward(char)
                 
-            char = self.relfector.reflect(char)
+            char = self.reflector.reflect(char)
             
             for rotor in reversed(self.rotors):
                 char = rotor.encode_backward(char)
@@ -48,18 +53,6 @@ class Enigma:
         return result 
     
     
-    
-    
-    
-    
-    
-    
-    #  wrote out the bones on autopilot a bit, but writing 
-    #  tests quickly remembered that enigma is symettrical, 
-    #  ie i don't need two functions, just one that can be 
-    #  set the same way and then work the same way; 
-    #  plaintext becomes cipher, cipher becomes plaintext
-    
-    #  next step (well, sleep, and then) is to flesh this out, but with 
-    #  a single 'do enigma to it' function, albeit probbaly 
-    #  with a more seinseible name, like 'process' or 'transform'
+    def reset(self):
+        for rotor in self.rotors:
+            rotor.reset()    
