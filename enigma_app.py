@@ -58,7 +58,7 @@ else:
     
     st.text_area('Output:', value=translated_message, height=210)
 
-st.write(f"Current rotor positions: {''.join(initial_positions)}")
+# st.write(f"Current rotor positions: {''.join(initial_positions)}")
 
 # Add a button to reset the rotor positions
 # if st.button('Reset Rotor Positions'):
