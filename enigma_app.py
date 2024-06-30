@@ -4,7 +4,7 @@ from enigma_machine.reflector import Reflector
 from enigma_machine.plugboard import Plugboard
 from enigma_machine.enigma import Enigma
 
-st.title("enigma_")
+st.title("_enigma")
 
 def create_rotor_display(rotor_name, position):
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -61,10 +61,10 @@ else:
 st.write(f"Current rotor positions: {''.join(initial_positions)}")
 
 # Add a button to reset the rotor positions
-if st.button('Reset Rotor Positions'):
-    initial_positions = ['A', 'M', 'T']
-    if use_rotor_iv:
-        initial_positions.append('A')
-    if use_rotor_v:
-        initial_positions.append('A')
-    st.experimental_rerun()
+# if st.button('Reset Rotor Positions'):
+#     initial_positions = ['A', 'M', 'T']
+#     if use_rotor_iv:
+#         initial_positions.append('A')
+#     if use_rotor_v:
+#         initial_positions.append('A')
+#     st.experimental_rerun()

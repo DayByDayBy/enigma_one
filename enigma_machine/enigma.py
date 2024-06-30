@@ -40,7 +40,7 @@ class Enigma:
     def process(self, message):
         result = []
         for char in message:
-            if char.isalpha() or char.isspace():
+            if char.isalpha():
                 self.rotate_rotors()
                 char = self.plugboard.swap(char)
             
