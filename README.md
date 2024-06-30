@@ -1,6 +1,6 @@
 # enigma_one 
 
-#### encode, decode, holiday inn
+#### encode, decode, idempotence inn
 
 
 ## modelling enigma, the classic cryptography machine
@@ -23,7 +23,6 @@ no real influence on this project, it's just kinda cool cryptography nerd stuff 
 _"The "Breaking German Navy Ciphers" Project was founded in 2012 by Michael Hörenberg. The goal is to break original radio messages, which were encoded with the famous German ENIGMA cipher machine. Up to now, we've succeeded in deciphering over 70 original World War II Enigma I M3 and M4 messages. Many of these messages had never been broken before, so you can read them for the first time in history..."_
 
 
-
 M:
 
 - core encryption algorithm (encode/decode)
@@ -35,8 +34,13 @@ M:
 
 S:
 
-C
-W
+C: 
+
+W:
+
+- complete the moscow board, i guess? got too excited geeking out about cryptopgraphy, just got stuck in 
+
+
 
 
 1. scherbius' OG:
