@@ -11,9 +11,9 @@ class Plugboard:
         return self.connections.get(char, char)
 
 
-if __name__ == "__main__":
+
         
-    plugboard = Plugboard(connections=[('A', 'Q'), ('B', 'F')])               
-    print(plugboard.swap('A'))
-    print(plugboard.swap('B'))
+    # plugboard = Plugboard(connections=[('A', 'Q'), ('B', 'F')])               
+    # print(plugboard.swap('A'))
+    # print(plugboard.swap('B'))
         

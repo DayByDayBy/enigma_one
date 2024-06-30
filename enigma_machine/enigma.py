@@ -15,6 +15,7 @@ class Enigma:
         self.rotors = rotors
         self.reflector = reflector
         self.plugboard = plugboard
+        self.initial_positions = [rotor.position for rotor in rotors]
    
 
     # def encrypt(self, message):
@@ -37,31 +38,30 @@ class Enigma:
     
     
     def process(self, message):
-        result = ""
+        result = []
         for char in message:
-            if char == ' ':
-                result += ' '
-                continue
+            if char.isalpha():
+                self.rotate_rotors()
+                char = self.plugboard.swap(char)
             
-            char = self.plugboard.swap(char)
-            
-            for rotor in self.rotors:
-                rotor.rotate()
-                char = rotor.encode_forward(char)
+                for rotor in reversed(self.rotors):
+                    char = rotor.encode_forward(char)
                 
-            char = self.reflector.reflect(char)
+                char = self.reflector.reflect(char)
+                
+                for rotor in self.rotors:
+                    char = rotor.encode_backward(char)
+                char = self.plugboard.swap(char)
             
-            for rotor in reversed(self.rotors):
-                char = rotor.encode_backward(char)
-            char = self.plugboard.swap(char)
-            
-            result += char
-        return result 
+            result.append(char)
+        return ''.join(result)
     
     
     def reset(self):
-        for rotor in self.rotors:
-            rotor.reset()    
+        for rotor, position in zip(self.rotors, self.initial_positions):
+            rotor.position = position    
+            
 
-
-
+    def rotate_rotors(self):
+       for rotor in self.rotors:
+           rotor.rotate()
