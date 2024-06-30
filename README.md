@@ -5,16 +5,25 @@
 
 ## modelling enigma, the classic cryptography machine
 
-early days, hence the whiteboard-and-post-its vibe to the readme and some of the comments
 
-plan is to make the classic function (aimihg for mid to late war, ie 3 rotors 
-and 1 relfector, plugboard), and then maybe make the variants (M4, etc)
+a model of the classic encyrption device using python, and a streamlit interface 
 
-if that works fine, i also think it might be interesting to make one that 
-can work outside the ALL CAPS ALPHABETICALS, and maybe explore making one 
-with more rotors. the reflector problem is also on the list, 
-and of course TypeX is an influence there, and tbh i think it might 
-also be interesting to borrow the 'multi notch' idea, and the 'direction-dependent notch' idea
+MVP completed, some extensions and added features yet to be added
+
+some classic era function is not yet deployed, such as variable rotor settings (currently the first three are set to AMT, for Alan Mathison Turing), an editable/pluggable plugboard, etc 
+
+
+
+
+
+i also think it might be interesting to make it so it 
+can work outside the ALL CAPS ALPHABETICALS, and maybe explore making 
+more rotors. the 'reflector flaw' problem is also on the list, 
+and of course TypeX is an influence there.  tbh i think it might 
+also be interesting to borrow the 'multi notch' and the 
+'direction-dependent notch' ideas, but that's perhaps getting 
+a big ahead of myself.  heck, maybe i should also rewrite it 
+all in C, golang, or something else i don't really use/shoudl learn
 
 oh, and shoutout to https://enigma.hoerenberg.com/
 
@@ -22,7 +31,7 @@ no real influence on this project, it's just kinda cool cryptography nerd stuff 
 
 _"The "Breaking German Navy Ciphers" Project was founded in 2012 by Michael Hörenberg. The goal is to break original radio messages, which were encoded with the famous German ENIGMA cipher machine. Up to now, we've succeeded in deciphering over 70 original World War II Enigma I M3 and M4 messages. Many of these messages had never been broken before, so you can read them for the first time in history..."_
 
-
+<!-- 
 M:
 
 - core encryption algorithm (encode/decode)
@@ -42,7 +51,6 @@ W:
 
 
 
-
 1. scherbius' OG:
 
 - keyboard for input
@@ -58,15 +66,4 @@ possible components:
 - Rotor class: Represents each rotor with its wiring and rotation mechanism
 - Reflector class: Handles the reflection of signals
 - Plugboard class: Manages the plugboard connections
-- Enigma class: Combines all components and handles the encryption process
-
-
-
------   --------------------------------
-
-
-
-
-update: 
-got in a bit late, so the readme will have to wait
-code is now more like i expect it to be and passing basic tests, altho i am still to write one set of them, test_enigma.py is empty atm
+- Enigma class: Combines all components and handles the encryption process -->
