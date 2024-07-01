@@ -12,7 +12,7 @@ MVP completed, some extensions and added features yet to be added
 
 some classic era function is not yet deployed, such as variable rotor settings (currently the first three are set to AMT, for Alan Mathison Turing), an editable/pluggable plugboard, etc 
 
-
+currentlt running as a streamlit app on https://enigma-one.streamlit.app/
 
 
 
@@ -23,7 +23,7 @@ and of course TypeX is an influence there.  tbh i think it might
 also be interesting to borrow the 'multi notch' and the 
 'direction-dependent notch' ideas, but that's perhaps getting 
 a big ahead of myself.  heck, maybe i should also rewrite it 
-all in C, golang, or something else i don't really use/shoudl learn
+all in C, golang, or something else i don't really use/should learn
 
 oh, and shoutout to https://enigma.hoerenberg.com/
 
@@ -46,9 +46,7 @@ S:
 C: 
 
 W:
-
 - complete the moscow board, i guess? got too excited geeking out about cryptopgraphy, just got stuck in 
-
 
 
 1. scherbius' OG:
