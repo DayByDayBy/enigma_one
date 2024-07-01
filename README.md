@@ -12,7 +12,7 @@ MVP completed, some extensions and added features yet to be added
 
 some classic era function is not yet deployed, such as variable rotor settings (currently the first three are set to AMT, for Alan Mathison Turing), an editable/pluggable plugboard, etc 
 
-currentlt running as a streamlit app on https://enigma-one.streamlit.app/
+currently running as a streamlit app on https://enigma-one.streamlit.app/
 
 
 
