@@ -50,7 +50,7 @@ class Enigma:
                 char = self.reflector.reflect(char)
                 
                 for rotor in self.rotors:
-                    char = rotor.encode_backward(char)
+                    char = rotor.encode_backward(char) 
                 char = self.plugboard.swap(char)
             
             result.append(char)
